@@ -43,12 +43,14 @@ nums[i] = 1
 complement = target - nums[i] = 5 - 1 = 4
 map.containsKey(4): false
 → Adiciona 1 ao mapa: map = {1=0}.
+
 2. Segunda iteração (i = 1):
 
 nums[i] = 2
 complement = target - nums[i] = 5 - 2 = 3
 map.containsKey(3): false
 → Adiciona 2 ao mapa: map = {1=0, 2=1}.
+
 3. Terceira iteração (i = 2):
 
 nums[i] = 3
