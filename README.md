@@ -31,41 +31,40 @@ The two are equal, so the function returns true.
 # ✅ Two Sum
 ## 💡 **How does this work?**
 ### HashMap
-Array: {2, 7, 11, 15}
-Target: 29
+**Input:**
+```java
+nums = {1, 2, 3, 4}
+target = 5 
+```
+Iterations:
+1. Primeira iteração (i = 0):
 
-Initially, the map is empty: {}.
+nums[i] = 1
 
-First number (nums[0] = 2):
+complement = target - nums[i] = 5 - 1 = 4
 
-Complement: 29 - 2 = 27
+map.containsKey(4): false
 
-Check: 27 is not on the map.
+→ Adiciona 1 ao mapa: map = {1=0}.
 
-Add: {2=0}.
+2. Segunda iteração (i = 1):
 
-Second number (nums[1] = 7):
+nums[i] = 2
 
-Complement: 29 - 7 = 22
+complement = target - nums[i] = 5 - 2 = 3
 
-Check: 22 is not on the map.
+map.containsKey(3): false
 
-Add: {2=0, 7=1}.
+→ Adiciona 2 ao mapa: map = {1=0, 2=1}.
 
-Third number (nums[2] = 11):
+3. Terceira iteração (i = 2):
 
-Complement: 29 - 11 = 18
+nums[i] = 3
 
-Check: 18 is not on the map.
+complement = target - nums[i] = 5 - 3 = 2
 
-Add: {2=0, 7=1, 11=2}.
+map.containsKey(2): true
 
-Fourth number (nums[3] = 15):
-
-Complement: 29 - 15 = 14
-
-Check: 14 is not on the map.
-
-Add: {2=0, 7=1, 11=2, 15=3}
-
-29 doesn't exist so returns empty.
+```java
+return new int[]{map.get(2), 2}; // Retorna {1, 2}
+```
